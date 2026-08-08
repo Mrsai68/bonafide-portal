@@ -6,7 +6,9 @@
     "vercel-build": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
+    "brew": "^0.0.8",
     "git": "^0.1.5",
+    "render": "^0.1.4",
     "vercel": "^58.9.0"
   }
 }
