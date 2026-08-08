@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: bonafide-portal
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/bonafide_db}}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+bonafide:
+  app:
+    jwtSecret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250655368566D5971}
+    jwtExpirationMs: 86400000 # 24 Hours
+    institutionName: "Government Polytechnic Miraj"
+    institutionAddress: "Mazi Sainik Vasahat Miraj MIDC, Miraj 416-410"
+    verificationBaseUrl: ${VERIFICATION_BASE_URL:http://localhost:8080/verify?certNo=}
+
+server:
+  port: ${PORT:8080}
+

@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+target/
+dist/
+frontend/dist/
+
+# IDE & Editor files
+.idea/
+.settings/
+*.classpath
+*.project
+*.iml
+
+# Deployment & Environment
+.vercel
+.netlify
+.env
+.env.local
+.env.*.local
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
